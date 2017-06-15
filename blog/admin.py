@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
-import sys;
+import importlib
+import sys
 
-reload(sys);
+importlib.reload(sys)
 sys.setdefaultencoding("utf8")
 
 from django.contrib import admin
