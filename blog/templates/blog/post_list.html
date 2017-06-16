@@ -1,18 +1,23 @@
+{% load staticfiles %}
 <html>
     <head>
-        <title>Django Girls blog</title>
+        <title>Django Suweb Blog</title>
+		<link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     </head>
     <body>
-        <div>
-        <h1><a href="/">susublog</a></h1>
-    </div>
-
-    {% for post in posts %}
-        <div>
-            <p>published: {{ post.published_date }}</p>
-            <h1><a href="">{{ post.title }}</a></h1>
-            <p>{{ post.text|linebreaksbr }}</p>
+        <div class="page-header">
+            <h1><a href="/">Django Suweb Blog</a></h1>
         </div>
-    {% endfor %}
+
+        {% for post in posts %}
+            <div class="post">
+                <p>published: {{ post.published_date }}</p>
+                <h1><a href="">{{ post.title }}</a></h1>
+                <p>{{ post.text|linebreaksbr }}</p>
+            </div>
+        {% endfor %}
     </body>
 </html>
