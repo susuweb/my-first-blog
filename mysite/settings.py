@@ -25,7 +25,7 @@ SECRET_KEY = '+od!pi_!+3y*goycuj9su(h8!ew8((%)0(1k&a3e!0_!6q3kys'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['localhost','127.0.0.1','susuweb.pythonanywhere.com']
 
 
 # Application definition
